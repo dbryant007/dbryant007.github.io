@@ -1,0 +1,152 @@
+/* Dustin Bryant, 11/7/19 */
+@font-face {
+    font-family: 'quicksand';
+    src: url('../fonts/Quicksand-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'quicksand', 'Arial Narrow', Arial, sans-serif;
+    background-color: #AFFFFB;
+    margin: 0 10%;    
+}
+
+h1 {
+    font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-top:115px;
+    margin-bottom: 0%;
+}
+
+span {
+    font-weight: bold;;
+}
+
+header img {
+    float: left;
+    margin-right: 0%;
+    padding-bottom: 10px;
+}
+
+h2,th {
+    color: gray;
+    font-size: 1em;
+    text-align: left;
+}
+
+hr {
+    border: 1px solid #57b1dc;
+}
+
+#bottom {
+    text-align: center;
+    border-top: 5px solid #57b1dc;
+    padding-top: 10px;
+}
+
+.middle {
+    font-family: Cambria;
+}
+
+nav {
+    display: table;
+    width: 100%;
+    border-top: 5px solid #57b1dc;
+}
+
+nav ul{
+    display: table-row;
+    margin: 0%;    
+    list-style-type: none;
+}
+nav ul li {
+    display: table-cell;
+    width: 20%;
+    text-align: center;    
+    border-collapse: collapse;    
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;    
+}
+
+.fade {
+    transition: .4s;
+}
+
+.fade:hover {
+    background-color: #57b1dc;    
+}
+
+footer div {
+    margin-top: 5px;
+}
+
+img {
+    border-radius: 50%;
+}
+fieldset {
+    border: 2px solid #57b1dc;
+}
+
+table.exp {
+    width: 90%;
+    margin: auto;
+    border: 2px solid #57b1dc;    
+}
+
+table.exp tbody tr:hover {
+    background-color: #57b1dc;
+}
+table.exp td {
+    width: 10px;
+    border-top: 2px solid #57b1dc;    
+}
+
+table.exp tfoot {
+   font-size: .7em;
+   font-style: italic; 
+}
+
+#hireme {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-bottom: 10px;
+    border: 2px solid #57b1dc;
+    background-color: #57b1dc;
+    transition: .4s;
+}
+
+#hireme:hover {
+    background-color: #AFFFFB;
+}
+
+#hireme:visited {
+    color: black;
+}
+
+.aboutleft {
+    float:left;
+    margin-right: 10px;
+}
+.aboutright {
+    float:right;
+    margin-right: 10px;
+}
+
+div#mainback {
+    background-color: lightgray;
+    border-radius: 10%;
+    padding: 5%;
+}
