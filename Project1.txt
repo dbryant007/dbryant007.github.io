@@ -345,3 +345,9 @@ VALUES
 	('Stephen Strange', 'Sorcerer Supreme Pizza', 8765432109, 'drwizard@hushmail.com', true, false, false,
      'I am a recruiter and would like to speak with you about a position.', 'How well do you know your inner self?',
      NOW(), 1);
+
+use my_portfolio;
+GRANT SELECT, INSERT, UPDATE
+ON my_portfolio.*
+TO portfolio_user
+IDENTIFIED by 'Pa$$w0rd';
