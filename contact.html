@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 
 <!-- Dustin Bryant 11/7/19 -->
+<!--<?php 
+//select all toppings 
+    $howcontact = filter_input(INPUT_POST, 'howcontact', 
+            FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
+    if ($howcontact !== NULL) {
+        $top1 = $toppings[0];       // $top1 is pep
+        $top2 = $toppings[1];       // $top2 is olv
+        $top3 = $toppings[2];       // $top3 is not set – error
+    }
+    ?>-->
 
 <html lang="en">
 <head>
@@ -37,28 +47,28 @@
                     <table>
                         <tr>
                             <td><label for="name">Name: </label></td>
-                            <td><input type="text" id="name" name="name"></td>
+                            <td><input type="text" id="name" name="name" required></td>
                         </tr>
                         <tr>
                             <td><label for="company">Company: </label></td>
-                            <td><input type="text" id="company" name="company"></td>
+                            <td><input type="text" id="company" name="company" required></td>
                         </tr>
                         <tr>
                             <td><label for="telephone">Phone Number: </label></td>
-                            <td><input type="tel" id="telephone" name="telephone"></td>
+                            <td><input type="tel" id="telephone" name="telephone" required></td>
                         </tr>
                         <tr>
                             <td><label for="email">E-mail: </label></td>
-                            <td><input type="email" id="email" name="email"></td>
+                            <td><input type="email" id="email" name="email" required></td>
                         </tr>
                     </table>    
                 </fieldset>       
                 <br>           
                 <fieldset>
-                    <legend>What is the best way to contact you?</legend>
-                    <input type="checkbox" name="howcontact" value="phone" id="phone"><label for="phone">By Phone</label><br>
-                    <input type="checkbox" name="howcontact" value="text" id="text"><label for="text">By Text</label><br>
-                    <input type="checkbox" name="howcontact" value="email" id="email"><label for="email">By E-mail</label><br>
+                    <legend>What is the best way to contact you? Please check at least one.</legend>                   
+                    <input type="checkbox" name="contact_phone" value="phone" id="phone"><label for="phone">By Phone</label><br>
+                    <input type="checkbox" name="contact_text" value="text" id="text"><label for="text">By Text</label><br>
+                    <input type="checkbox" name="contact_email" value="email" id="email"><label for="email">By E-mail</label><br>
                 </fieldset>
                 <br>
                 <fieldset>
@@ -71,7 +81,7 @@
                 </fieldset>        
                 <br>
                 <fieldset> 
-                <label for="comments">Is there anything else I need to know?<br></label><textarea id="comments" name="comments" rows="5" cols="50"></textarea><br>
+                <label for="comments">Is there anything else I need to know?<br></label><textarea id="comments" name="comments" rows="5" cols="50" maxlength="255" required></textarea><br>
                 <input type="submit" >
                 </fieldset>
             </fieldset>
