@@ -95,7 +95,24 @@ fieldset {
     border: 2px solid #57b1dc;
 }
 
+table.exp {
+    width: 90%;
+    margin: auto;
+    border: 2px solid #57b1dc;
+}
 
+table.exp tbody tr:hover {
+    background-color: #57b1dc;
+}
+table.exp td {
+    width: 10px;
+    border-top: 2px solid #57b1dc;    
+}
+
+table.exp tfoot {
+   font-size: .7em;
+   font-style: italic; 
+}
 
 #hireme {
     display: block;
@@ -151,4 +168,9 @@ table.pagevisitors td {
 table.pagevisitors tfoot {
    font-size: .7em;
    font-style: italic; 
+}
+
+.firstcolumn {
+    width: 100%;
+    
 }
