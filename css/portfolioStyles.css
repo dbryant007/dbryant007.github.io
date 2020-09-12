@@ -95,24 +95,7 @@ fieldset {
     border: 2px solid #57b1dc;
 }
 
-table.exp {
-    width: 90%;
-    margin: auto;
-    border: 2px solid #57b1dc;    
-}
 
-table.exp tbody tr:hover {
-    background-color: #57b1dc;
-}
-table.exp td {
-    width: 10px;
-    border-top: 2px solid #57b1dc;    
-}
-
-table.exp tfoot {
-   font-size: .7em;
-   font-style: italic; 
-}
 
 #hireme {
     display: block;
@@ -149,4 +132,23 @@ div#mainback {
     background-color: lightgray;
     border-radius: 10%;
     padding: 5%;
+}
+
+table.pagevisitors {
+    width: 90%;
+    margin: auto;
+    border: 2px solid #57b1dc;
+}
+
+table.pagevisitors tbody tr:hover {
+    background-color: #57b1dc;
+}
+table.pagevisitors td {
+    width: 10px;
+    border-top: 2px solid #57b1dc;    
+}
+
+table.pagevisitors tfoot {
+   font-size: .7em;
+   font-style: italic; 
 }
