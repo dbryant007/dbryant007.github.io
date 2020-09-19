@@ -1,6 +1,11 @@
-<!-- Dustin Bryant 9/4/20 -->
+
 <?php
-    require_once('database.php');  
+/*      9-4-20      Dustin Bryant       created page 
+        9-18-20     Dustin Bryant       Added function calls to the database 
+*/
+    require_once('./model/database.php');  
+    require_once('./model/employee.php');
+    require_once('./model/visitor.php');
 
     //echo "Connection ok.";
     // Get category ID
@@ -11,23 +16,8 @@
         $employeeID = 1;
     }
 }
-    // Get all employees
-    $query = 'SELECT * FROM employee
-                           ORDER BY employeeID';
-    $statement = $db->prepare($query);
-    $statement->execute();
-    $employees = $statement->fetchAll();
-    $statement->closeCursor();
-
-    // Get all visitors
-    $queryVisitors = 'SELECT * FROM visitor
-                      WHERE employeeID = :employeeID
-                      ORDER BY visitorID';
-    $statement3 = $db->prepare($queryVisitors);
-    $statement3->bindValue(':employeeID', $employeeID);
-    $statement3->execute();
-    $visitors = $statement3->fetchAll();
-    $statement3->closeCursor();
+    $employees = getEmployees();    //calling function in employee.php
+    $visitors = getVisitorByEmp($employeeID);   //calling function in visitor.php
 
 ?>
 <html lang="en">
@@ -44,7 +34,7 @@
 <body>    
     <header>
         <div class="top">
-            <a href="index.html"><img src="images/default_user_icon.png" alt="user icon" style="height:150px;width:auto;"/></a>
+            <a href="index.html"><img src="images/logo.svg" alt="user icon" /></a>
             <h1>Dustin Bryant</h1>
         </div>
         <nav>
@@ -52,21 +42,33 @@
                 <li class="fade"><a href="index.html">Home</a></li>
                 <li class="fade"><a href="about.html">About</a></li>
                 <li class="fade"><a href="experience.html">Experience</a></li>
-                <li class="fade"><a href="contact.html">Contact</a></li>                
+                <li class="fade"><a href="contact.html">Contact</a></li>
+                <li class="fade"><a href="login.php">Admin</a></li>                
             </ul>
         </nav>
     </header>
     <main>
         <h3>Select an employee:</h3>
+        
             <?php foreach ($employees as $employee) : ?>
-                <li>
-                    <a href="?employeeID=<?php echo $employee['employeeID']; ?>"> <!--building a link to the employeeID number-->
+        <tr>
+            <td>
+                    <a class="employees" href="?employeeID=<?php echo $employee['employeeID']; ?>"> <!--building a link to the employeeID number-->
+                        <?php echo $employee['first_name'];?>
+                        <br>
+                        <?php echo $employee['last_name']; ?>
+                    </a>
+            </td>
+                </tr>
+<!--                <li>
+                    <a class="delete" href="?employeeID=<?php echo $employee['employeeID']; ?>"> building a link to the employeeID number
                         <?php echo $employee['first_name']; ?>
                         <?php echo $employee['last_name']; ?>
                     </a>
-                </li>
+                </li>-->
             <?php endforeach; ?>
-            
+        
+                <br>
             <table class="pagevisitors">
                 <thead>    
                     <tr>
@@ -82,7 +84,7 @@
                 </thead>
                 <tbody>
                         
-
+            <h3>List of Visitors:</h3>            
             <?php foreach ($visitors as $visitor) : ?>
                 <tr>
                     <td class="firstcolumn"><?php echo $visitor['visitorID']; ?></td>            
@@ -94,7 +96,7 @@
                     <td><?php echo $visitor['visit_date']; ?></td>
                     <td class="right"><?php echo $visitor['visitor_company']; ?></td>
                     <td><form action="delete_visitor.php" method="post">
-                        <input type="hidden" name="visitor_id"
+                        <input type="hidden" name="visitor_id" 
                                value="<?php echo $visitor['visitorID']; ?>">
 
                         <input type="submit" value="Delete">
@@ -104,5 +106,18 @@
             <?php endforeach; ?>
                     </tbody>
         </table>
+                <br>
     </main>
+    <footer>
+    <div id="bottom"><!-- The bottom id aligns the contact info. -->        
+        Email: <a href="mailto:dustinbryant@my.cwi.edu">dustinbryant@my.cwi.edu</a><br>
+        Phone: <a href="tel:+12088907307">208-890-7307</a>              
+        <div>
+            <a href="https://www.github.com" target="_blank"><img src="images/github-48_gray.png" alt="githup logo"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin-48_gray.png" alt="githup logo"></a>
+        </div> 
+    </div>                   
+</footer>
+
+</body>
 </html>

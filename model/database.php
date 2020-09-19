@@ -1,4 +1,7 @@
 <?php
+/*      9-18-20      Dustin Bryant       created page 
+             
+*/
     $dsn = 'mysql:host=localhost;dbname=my_portfolio';
     $username = 'portfolio_user';
     $password = 'Pa$$w0rd';
