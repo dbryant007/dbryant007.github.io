@@ -13,7 +13,7 @@
 <body>    
     <header>
         <div class="top">
-            <a href="index.html"><img src="images/default_user_icon.png" alt="user icon" style="height:150px;width:auto;"/></a>
+            <a href="index.html"><img src="images/logo.svg" alt="user icon"/></a>
             <h1>Dustin Bryant</h1>
         </div>
         <nav>
@@ -21,7 +21,8 @@
                 <li class="fade"><a href="index.html">Home</a></li>
                 <li class="fade"><a href="about.html">About</a></li>
                 <li class="fade"><a href="experience.html">Experience</a></li>
-                <li class="fade"><a href="contact.html">Contact</a></li>                
+                <li class="fade"><a href="contact.html">Contact</a></li>
+                <li class="fade"><a href="admin.php">Admin</a></li>                
             </ul>
         </nav>
     </header>

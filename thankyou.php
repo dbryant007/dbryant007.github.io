@@ -35,7 +35,7 @@
         $nochecks == null || $visitor_helpselected == null || 
         $visitor_message == null) {
         //$error = "Invalid input data. Check all fields and try again.";
-        include('error.php');
+        include('./model/error.php');
         //echo "Form Data Error: " . $error; 
         exit();
         } else {
@@ -71,7 +71,7 @@
                 <li class="fade"><a href="about.html">About</a></li>
                 <li class="fade"><a href="experience.html">Experience</a></li>
                 <li class="fade"><a href="contact.html">Contact</a></li>
-                <li class="fade"><a href="login.php">Admin</a></li>                
+                <li class="fade"><a href="admin.php">Admin</a></li>                
             </ul>
         </nav>
     </header>

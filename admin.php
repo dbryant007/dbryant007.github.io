@@ -3,9 +3,12 @@
 /*      9-4-20      Dustin Bryant       created page 
         9-18-20     Dustin Bryant       Added function calls to the database 
 */
-    require_once('./model/database.php');  
-    require_once('./model/employee.php');
-    require_once('./model/visitor.php');
+require_once('./util/secure_conn.php');
+require_once('./util/valid_admin.php');
+    
+require_once('./model/database.php');  
+require_once('./model/employee.php');
+require_once('./model/visitor.php');
 
     //echo "Connection ok.";
     // Get category ID
@@ -43,7 +46,7 @@
                 <li class="fade"><a href="about.html">About</a></li>
                 <li class="fade"><a href="experience.html">Experience</a></li>
                 <li class="fade"><a href="contact.html">Contact</a></li>
-                <li class="fade"><a href="login.php">Admin</a></li>                
+                <li class="fade"><a href="admin.php">Admin</a></li>                
             </ul>
         </nav>
     </header>

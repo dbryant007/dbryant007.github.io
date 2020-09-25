@@ -1,30 +1,8 @@
 <!-- Dustin Bryant 9/16/20 Added listemployees using classes and objects.-->
+<!-- Dustin Bryant 9/16/20 Added require_once and deleted duplicate constructor.-->
 <?php
-    class Database {
-    private static $dsn = 'mysql:host=localhost;dbname=my_portfolio';
-    private static $username = 'portfolio_user';
-    private static $password = 'Pa$$w0rd';
-    private static $db;
+require_once('./model/database.php');
 
-    private function __construct() {}
-
-    public static function getDB () {
-        if (!isset(self::$db)) {
-            try {
-                self::$db = new PDO(self::$dsn,
-                                     self::$username,
-                                     self::$password);
-            } catch (PDOException $e) {
-                $error_message = $e->getMessage();
-                //include('../errors/database_error.php');
-                echo "Connection error";
-                exit();
-            }
-        }
-        return self::$db;
-    }
-}
-  
 class Employee {
     private $id;
     private $first_name;
@@ -110,7 +88,7 @@ $employees = EmployeeDB::getEmployees();
         </nav>
     </header>
     <main>
-        <h2>Employee LIsting</h2>
+        <h2>Employee Listing</h2>
         <p>&nbsp</p>
         <ul>
             <?php foreach ($employees as $employee) : ?>
