@@ -53,25 +53,19 @@ require_once('./model/visitor.php');
     <main>
         <h3>Select an employee:</h3>
         
-            <?php foreach ($employees as $employee) : ?>
+        <?php foreach ($employees as $employee) : ?>
         <tr>
             <td>
-                    <a class="employees" href="?employeeID=<?php echo $employee['employeeID']; ?>"> <!--building a link to the employeeID number-->
-                        <?php echo $employee['first_name'];?>
-                        <br>
-                        <?php echo $employee['last_name']; ?>
-                    </a>
+                <a class="employees" href="?employeeID=<?php echo $employee['employeeID']; ?>"> <!--building a link to the employeeID number-->
+                    <?php echo $employee['first_name'];?>
+                    <br>
+                    <?php echo $employee['last_name']; ?>
+                </a>
             </td>
-                </tr>
-<!--                <li>
-                    <a class="delete" href="?employeeID=<?php echo $employee['employeeID']; ?>"> building a link to the employeeID number
-                        <?php echo $employee['first_name']; ?>
-                        <?php echo $employee['last_name']; ?>
-                    </a>
-                </li>-->
-            <?php endforeach; ?>
+        </tr>
+        <?php endforeach; ?>
         
-                <br>
+            <br>
             <table class="pagevisitors">
                 <thead>    
                     <tr>
@@ -104,10 +98,9 @@ require_once('./model/visitor.php');
 
                         <input type="submit" value="Delete">
                     </form></td>
-                </tr>
-            
+                </tr>            
             <?php endforeach; ?>
-                    </tbody>
+            </tbody>
         </table>
                 <br>
     </main>
