@@ -1,0 +1,8 @@
+li span {
+    display: none;
+}
+
+li span.open {
+    display: block;
+}
+
