@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<!-- 
+Original Author: Dustin Bryant
+Date Created: 11/7/19
+Version: 1.0
+Date Last Modified: 11/7/19
+Modified by: Dustin Bryant
+Modification log: First Draft
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Dustin Bryant's software development portfolio">
+    <meta name="keywords" content="Dustin Bryant, portfolio, programmer, sofware development">
+    <meta name="author" content="Dustin Bryant">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/portfolioStyles.css">
+    <title>Dustin Bryant - Contact</title>
+</head>
+<body>    
+    <header>
+        <a href="index.html"><img src="images/logo.svg" alt="dustin bryant's logo"></a>
+        <h1>Dustin Bryant - Contact</h1>        
+        <nav>
+            <ul>
+                <li class="fade"><a href="index.html">Home</a></li>
+                <li class="fade"><a href="about.html">About</a></li>
+                <li class="fade"><a href="experience.html">Experience</a></li>
+                <li class="fade"><a href="contact.html">Contact</a></li>                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <form action="mailto:dustinbryant@my.cwi.edu" enctype="text/plain" id="contact" method="POST" name="contact">
+            <fieldset><!-- This fieldset is for the outer border around all the form elements -->
+                <fieldset id="contactinfo">
+                    <legend>Please enter your contact information:</legend>
+                    <table><!-- Added a table inside the contact information section in order to align the textboxes -->
+                        <tr>
+                            <td><label for="name">Name: </label></td>
+                            <td><input type="text" id="name" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="company">Company: </label></td>
+                            <td><input type="text" id="company" name="company"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phonenumber">Phone Number: </label></td>
+                            <td><input type="tel" id="phonenumber" name="phonenumber"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">E-mail: </label></td>
+                            <td><input type="email" id="email" name="email"></td>
+                        </tr>
+                    </table>    
+                </fieldset>       
+                <br>           
+                <fieldset>
+                    <legend>What is the best way to contact you?</legend>
+                    <input type="checkbox" name="howcontact" value="byphone" id="byphone"><label for="byphone">By Phone</label><br>
+                    <input type="checkbox" name="howcontact" value="bytext" id="bytext"><label for="bytext">By Text</label><br>
+                    <input type="checkbox" name="howcontact" value="byemail" id="byemail"><label for="byemail">By E-mail</label><br>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend><label for="help">How can I help you?</label></legend>
+                    <select name="help" id="help">
+                        <option value="recruiter">I am a recruiter and would like to speak with you about a position.</option>
+                        <option value="freelance">I was referred to you and would like you to do some work for me.</option>
+                        <option value="hiringmanager">I am a hiring manager and would like to review your resume.</option>
+                    </select>
+                </fieldset>        
+                <br>
+                <fieldset> 
+                <label for="comments">Is there anything else I need to know?<br></label><textarea id="comments" name="comments" rows="5" cols="50"></textarea><br>
+                <input type="submit">
+                </fieldset>
+            </fieldset>
+        </form>
+    </main>
+    <br>
+    <footer>
+            <div id="bottom"><!-- The bottom id aligns the contact info. -->        
+                Email: <a href="mailto:dustinbryant@my.cwi.edu">dustinbryant@my.cwi.edu</a><br>
+                Phone: <a href="tel:+12088907307">208-890-7307</a>              
+                <div>
+                    <a href="https://www.github.com" target="_blank"><img src="images/github-48_gray.png" alt="githup logo"></a>
+                    <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin-48_gray.png" alt="githup logo"></a>
+                </div> 
+            </div>                   
+        </footer>
+</body>
+</html>

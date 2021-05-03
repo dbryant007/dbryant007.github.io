@@ -1,0 +1,178 @@
+/*  
+Original Author: Dustin Bryant
+Date Created: 11/7/19
+Version: 1.0
+Date Last Modified: 2/21/2020
+Modified by: Dustin Bryant
+Modification log: First Draft
+Added heading and classes for the experience page
+*/
+/* Fonts */
+@font-face {
+    font-family: 'quicksand';
+    src: url('../fonts/Quicksand-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+/* body styling */
+body {
+    font-family: 'quicksand', 'Arial Narrow', Arial, sans-serif;
+    background-color: #AFFFFB;
+    margin: 0 10%;    
+}
+
+span {
+    font-weight: bold;;
+}
+
+hr {
+    border: 1px solid #57b1dc;
+}
+
+/* header styling */
+h1 {
+    font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-top:115px;
+    margin-bottom: 0%;
+}
+
+header img {
+    float: left;
+    margin-right: 0%;
+    padding-bottom: 10px;
+    height: 150px;
+    width: auto;
+}
+
+
+/* footer styling */
+#bottom {
+    text-align: center;
+    border-top: 5px solid #57b1dc;
+    padding-top: 10px;
+}
+
+div#bottom div {
+    margin-top: 5px;
+}
+/* navigation styling */
+nav {
+    display: table;
+    width: 100%;
+    border-top: 5px solid #57b1dc;
+}
+
+nav ul{
+    display: table-row;
+    margin: 0%;    
+    list-style-type: none;
+}
+nav ul li {
+    
+    display: table-cell;
+    width: 20%;
+    text-align: center;    
+    border-collapse: collapse;   
+}
+
+nav ul li a {
+    color: gray;
+    font-weight: bolder;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;    
+}
+
+.fade {
+    transition: .4s;
+}
+
+.fade:hover {
+    background-color: #57b1dc;
+}
+
+.fade:hover a {
+    color: white;       
+}
+/* Table styling on Experience and Contact page*/
+th {
+    color: gray;
+    font-weight: bolder;
+    font-size: 1em;
+    text-align: left;
+}
+
+/* Table styling on Experience page*/
+fieldset {
+    border: 2px solid #57b1dc;
+}
+
+table.exp {
+    width: 90%;
+    margin: auto;
+    border: 2px solid #57b1dc;
+    table-layout: fixed;
+    border-spacing: 6px;   
+}
+
+table.exp tbody tr:hover {
+    background-color: #57b1dc;
+}
+table.exp td {
+    border-top: 2px solid #57b1dc;    
+}
+
+table.exp tfoot {
+   font-size: .7em;
+   font-style: italic; 
+}
+
+.answer-hide {
+    display: none;
+}
+
+.open {
+    display: table-row-group;
+}
+/* Button/Link on index page*/
+#hireme {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-bottom: 10px;
+    border: 2px solid #57b1dc;
+    background-color: #57b1dc;
+    transition: .4s;
+}
+
+#hireme:hover {
+    background-color: #AFFFFB;
+}
+
+#hireme:visited {
+    color: black;
+}
+/* Image in About page */
+div#about {
+    float:left;
+    margin-right: 10px;
+    
+}
+
+div#about img {
+    border-radius: 50%;
+    height: 100px;
+    width: auto;
+}
+/* Form styling */
+form {
+    width: 90%;
+    margin: auto;
+}
