@@ -1,0 +1,129 @@
+/*
+#Original Author: Dustin Bryant                                   
+#Date Created: 2/26/20                                          
+#Version: 1.0                                                    
+#Date Last Modified: 2/28/20                            
+#Modified by: Dustin Bryant                                           
+#Modification log: Brand new                                  
+*/
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar { 
+  margin-bottom: 0;
+  border-radius: 0;
+}
+  
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: linear-gradient(to bottom right, white 30%, gray 31%,white 40%, white 41%, gray 50%, gray 69%, white 70%);
+  min-height: 100%;
+}
+
+/* Second image (Red) */
+.bgimg-2 {
+  background-image: linear-gradient(to bottom right, white 30%, red 31%,white 40%, white 41%, red 50%, red 69%, white 70%);
+  min-height: 100%;
+}
+
+/* Third image (Orange) */
+.bgimg-3 {
+  background-image: linear-gradient(to bottom right, white 30%, orange 31%,white 40%, white 41%, orange 50%, orange 69%, white 70%);
+  min-height: 700px;
+}
+
+/* Fourth image (Yellow) */
+.bgimg-4 {
+  background-image: linear-gradient(to bottom right, white 30%, rgb(228, 228, 0) 31%, white 40%, white 41%, rgb(228, 228, 0) 50%, rgb(228, 228, 0) 69%, white 70%);
+  min-height: 700px;
+}
+
+/* Fifth image (Green) */
+.bgimg-5 {
+  background-image: linear-gradient(to bottom right, white 30%, green 31%,white 40%, white 41%, green 50%, green 69%, white 70%);
+  min-height: 700px;
+}
+
+  /* Sixth image (Blue) */
+.bgimg-6 {
+  background-image: linear-gradient(to bottom right, white 30%, blue 31%,white 40%, white 41%, blue 50%, blue 69%, white 70%);
+  min-height: 700px;
+}
+
+/* Seventh image (Purple) */
+.bgimg-7 {
+  background-image: linear-gradient(to bottom right, white 30%, purple 31%,white 40%, white 41%, purple 50%, purple 69%, white 70%);
+  min-height: 700px;
+}
+/* Title and navbar text colors */
+.red {
+  color: red;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.green {
+  color: lightgreen;
+}
+
+.blue {
+  color: blue;
+}
+
+.purple {
+  color: purple;
+}
+
+.title-display-middle {
+  position: absolute;;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%)
+}
+
+body, html {
+  height: 100%;
+}
+
+.navbar-center {
+  position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+/* to offset the in-page anchors */
+:target:before {
+  content:"";
+  display:block;
+  height: 50px; /* fixed header height*/
+  margin:-50px 0 0; /* negative fixed header height */
+  }
