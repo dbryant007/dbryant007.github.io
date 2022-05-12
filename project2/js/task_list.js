@@ -3,7 +3,7 @@ var $ = function(id) {
      return document.getElementById(id);
 };
 
-var users = ['rickyd,prof','dustinb,stud','guest,passwurd'];
+var users = ['annad,prof','dustinb,stud','guest,passwurd'];
 
 var logIn = function() {
     var logInInfo =  $("username").value + "," + $("password").value;

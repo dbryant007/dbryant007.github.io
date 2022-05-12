@@ -1,8 +1,13 @@
 li span {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
 }
 
 li span.open {
-    display: block;
+    /* display: block; */
+    visibility: visible;
 }
 
+.carousel-caption {
+    background-color: hsla(0,0%,30%,.5);
+}
